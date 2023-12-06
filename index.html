@@ -5,30 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix and Friend</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="header">
         <div class="logo">
             <img src="https://assets.website-files.com/5fa4ab2c66c7503495b0088e/5fa4abda85f95a4242dc70c5_netflix.png"
-                loading="lazy" width="142" alt class="logo">
+                loading="lazy" width="142" alt="Netflix Logo" class="logo">
         </div>
         <div id="title" class="center-text">
             <h1>Netflix Analysis</h1>
         </div>
     </div>
-    
 
-    <div id="content" class="content">
-        <h3>Number of Movies and TV Shows</h3>
-
-        <svg id="barChart" width ="450" height="600" ></svg>
-        <svg id="pieChart" width ="300" height="300" ></svg>
-        <svg id="barchart1" width ="700" height="600" ></svg>
-
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div id="graph1"></div>
+                <div id="graph2"></div>  
+            </div>
+            <div class="swiper-slide">
+                <div id="graph3"></div>
+            </div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+        
+        <div class="swiper-pagination"></div>
     </div>
 
-
-    <script src="index.js"></script>
+    <script src="swiper.js"></script>
+    <script src="graph1.js"></script>
+    <script src="graph2.js"></script>
+    <script src="graph3.js"></script>
+    
+    
 </body>
 </html>
