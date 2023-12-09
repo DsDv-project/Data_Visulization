@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix and Friend</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <meta charset="utf-8" />
+  <title>Netflix and Friend</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
+
 <body>
-    <div class="header">
-        <div class="logo">
-            <img src="https://assets.website-files.com/5fa4ab2c66c7503495b0088e/5fa4abda85f95a4242dc70c5_netflix.png"
-                loading="lazy" width="142" alt="Netflix Logo" class="logo">
-        </div>
-        <div id="title" class="center-text">
-            <h1>Netflix Analysis</h1>
-        </div>
-    </div>
-
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div id="graph1"></div>
-                <div id="graph2"></div>  
-            </div>
-            <div class="swiper-slide">
-                <div id="graph3"></div>
-            </div>
-            <div class="swiper-slide">Slide 3</div>
-        </div>
-        
-        <div class="swiper-pagination"></div>
-    </div>
-
-    <script src="swiper.js"></script>
-    <script src="graph1.js"></script>
-    <script src="graph2.js"></script>
-    <script src="graph3.js"></script>
+  <img src="logo.png" alt="Logo" id="logo">
+  <h1 id ="title">Netflix Analysis</h1>
+  
     
-    
+
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" direction="vertical"
+    space-between="30" mousewheel="true">
+    <swiper-slide>
+      
+      <div id ="graph1"></div>
+      <div id ="graph2"></div>
+      
+    </swiper-slide>
+    <swiper-slide>
+      <div id ="graph3"></div>
+    </swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 4</swiper-slide>
+    <swiper-slide>Slide 5</swiper-slide>
+    <swiper-slide>Slide 6</swiper-slide>
+    <swiper-slide>Slide 7</swiper-slide>
+    <swiper-slide>Slide 8</swiper-slide>
+    <swiper-slide>Slide 9</swiper-slide>
+  </swiper-container>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src ="graph1.js"></script>
+  <script src ="graph2.js"></script>
+  <script src ="graph3.js"></script>
+
 </body>
+
 </html>
