@@ -52,12 +52,14 @@ d3.csv("netflix_titles_cleaned.csv").then(function(data) {
         .style("opacity", 0.7)
         .on("mouseover", function(d) {
             d3.select(this)
-                .duration(10)
+                .transition() // Add this line
+                .duration(100)
                 .style("opacity", 1);
         })
         .on("mouseout", function(d) {
             d3.select(this)
-                .duration(10)
+                .transition() // Add this line
+                .duration(100)
                 .style("opacity", 0.7);
         })
         .append("title") // Tooltip
@@ -65,6 +67,7 @@ d3.csv("netflix_titles_cleaned.csv").then(function(data) {
             .text(function (d) {
                  return ("Type: " + d.data.type + "\n" + "Count: " + d3.format(".1%")(d.data.count / d3.sum(pieData, function(d) { return d.count; })));
              });
+
     svg.selectAll('allPolylines')
              .data(data_ready)
              .enter()

@@ -29,7 +29,7 @@ d3.csv("netflix_titles_cleaned.csv", rowConverter).then(function(data) {
     console.log(countData);
 
     var width = 800;
-    var height = 650;
+    var height = 600;
     var margin = { top: 20, right: 70, bottom: 50, left: 90 };
 
     var svg = d3.select("#graph3")
