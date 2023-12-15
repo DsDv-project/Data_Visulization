@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <title>Heatmap in JavaScript</title>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-heatmap.min.js"></script> 
+    <style type="text/css">      
+      html, body, #container { 
+        width: 100%; margin: 0; padding: 0; 
+      } 
+    </style>
+  </head>
+  <body>  
+    <div id="graph4"></div>
+    <script >
+      anychart.onDocumentReady(function () {
+    // create a heatmap
+    var chart = anychart.heatMap(getData());
+    // set a custom color scale
+    var colorScale = anychart.scales.ordinalColor();
+    colorScale.ranges([
+      { less: 5, color: "#270000" },
+      { from: 5, to: 10, color: "#4E0000" },
+      { from: 10, to: 20, color: "#620000" },
+      { from: 20, to: 30, color: "#9D0000" },
+      { from: 30, to: 40, color: "#EB0000" },
+      { from: 40, to: 50, color: "#FF2727" },
+      { from: 50, to: 60, color: "#FF4E4E" },
+      { greater: 60, color: "#FF9C9C" }
+    ]);
+    chart.colorScale(colorScale);
+    // style the coloring in the hovered state
+    chart
+      .hovered().fill(function () {
+        return anychart.color.darken(this.sourceColor, 0.25);
+      });
+
+    // create percent labels on each cell
+    chart.labels().format(function () {
+      return this.heat + '%';
+  }).fontColor("#FFFFFF");
+  
+    
+    // customize the axes
+    chart.xAxis().stroke(null);
+    chart.yAxis().stroke(null);
+    chart.yAxis().labels().padding([0, 10, 0, 0]);
+    chart.xAxis().labels().padding([0, 0, 10, 0]);
+    // set the tooltip
+    chart.tooltip().title().useHtml(true);
+    chart
+      .tooltip()
+      .useHtml(true)
+      .titleFormat(function () {
+        return "Percent - " + this.heat + "%";
+      })
+      .format(function () {
+        return (
+          '<span style="color: #CECECE">Country: </span>' +
+          this.x +
+          "<br/>" +
+          '<span style="color: #CECECE">Percent: </span>' +
+          this.y
+        );
+      });
+    // name the heatmap
+    chart
+      .title()
+      .enabled(true)
+      .text("Target ages proportion of total content by country")
+      .fontWeight('bold')
+      .padding([0, 0, 20, 0]);
+    // set the container for the heatmap
+    chart.container("graph4");
+    // draw the heatmap
+    chart.draw();
+  });
+  // add the data
+  function getData() {
+    return [
+
+    ["USA",      "Kids",  9  ],
+    ["India",    "Kids",  2  ],
+    ["UK",       "Kids",  8  ],
+    ["Canada",   "Kids",  15 ],
+    ["Japan",    "Kids",  1  ],
+    ["France",   "Kids",  9  ],
+    ["S. Korea", "Kids",  5  ],
+    ["Spain",    "Kids",  4  ],
+    ["Mexico",   "Kids",  2  ],
+    ["Turkey",   "Kids",  1  ],
+
+    ["USA",      "OlderKids",  20],
+    ["India",    "OlderKids",  16],
+    ["UK",       "OlderKids",  18],
+    ["Canada",   "OlderKids",  22],
+    ["Japan",    "OlderKids",  28],
+    ["France",   "OlderKids",  11],
+    ["S. Korea", "OlderKids",  12],
+    ["Spain",    "OlderKids",  5 ],
+    ["Mexico",   "OlderKids",  9 ],
+    ["Turkey",   "OlderKids",  9 ],
+
+    ["USA",      "Teens", 25],
+    ["India",    "Teens", 56],
+    ["UK",       "Teens", 21],
+    ["Canada",   "Teens", 16],
+    ["Japan",    "Teens", 35],
+    ["France",   "Teens", 17],
+    ["S. Korea", "Teens", 37],
+    ["Spain",    "Teens", 11],
+    ["Mexico",   "Teens", 13],
+    ["Turkey",   "Teens", 35],
+
+    ["USA",      "Adults",  46],
+    ["India",    "Adults",  26],
+    ["UK",       "Adults",  53],
+    ["Canada",   "Adults",  47],
+    ["Japan",    "Adults",  37],
+    ["France",   "Adults",  63],
+    ["S. Korea", "Adults",  46],
+    ["Spain",    "Adults",  80],
+    ["Mexico",   "Adults",  76],
+    ["Turkey",   "Adults",  55]
+
+    ];
+  }
+    </script>
+  </body>
+</html> 
