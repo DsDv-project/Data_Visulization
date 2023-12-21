@@ -87,3 +87,14 @@ html,
       font-weight: bold;
 
     }
+    .tooltip {
+      background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+      position: absolute;
+      top: 135px; /* Adjust as needed */
+      left: 600px; 
+      color: white; /* White text */
+      padding: 10px; /* 10px padding around the text */
+      border-radius: 5px; /* Rounded corners */
+      transition: opacity 0.3s ease-in-out;
+      font-size: 40px;
+  }
