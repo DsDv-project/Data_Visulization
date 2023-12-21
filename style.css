@@ -51,6 +51,11 @@ html,
       top: 50px; /* Adjust this value to move the graph down */
       left: 50px; /* Adjust this value to move the graph to the right */
     }
+    #graph6 {
+      position: relative;
+      top: 200px; /* Adjust this value to move the graph down */
+      left: 400px; /* Adjust this value to move the graph to the right */
+    }
 
     #logo{
       position: fixed;
@@ -71,4 +76,14 @@ html,
       height: 50px;
       top: 100px; /* move the button down by 100px */
       left: 500px; /* move the button to the right by 100px */
+    }
+    #selectCountry{
+      position: relative;
+      width: 100px;
+      height: 80px;
+      top: 100px; /* move the button down by 100px */
+      left: 500px;
+      font-size: 30px;
+      font-weight: bold;
+
     }
