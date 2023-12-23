@@ -56,6 +56,23 @@ html,
       top: 200px; /* Adjust this value to move the graph down */
       left: 400px; /* Adjust this value to move the graph to the right */
     }
+    #graph4 {
+      position: relative;
+      top: 300px; /* Adjust this value to move the graph down */
+      left: 200px; /* Adjust this value to move the graph to the right */
+    }
+
+    #graph4_2 {
+      position: relative;
+      top: 300px; /* Adjust this value to move the graph down */
+      left: 400px; /* Adjust this value to move the graph to the right */
+    }
+
+    #graph4_3 {
+      position: relative;
+      top: 300px; /* Adjust this value to move the graph down */
+      left: 600px; /* Adjust this value to move the graph to the right */
+    }
 
     #logo{
       position: fixed;
