@@ -17,19 +17,22 @@
 
     <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" direction="vertical"
     space-between="30" mousewheel="true">
+
+    <swiper-slide>
+      <iframe src="lineChart.html" style="width: 1000px; height: 800px;"></iframe>
+      <div id="graph1"></div>
+    </swiper-slide>
+    
     <swiper-slide>
       
       <div id ="graph3"></div>
       <button id ="button">Top 3</button>
-      
-      
+
     </swiper-slide>
     <swiper-slide>
       <div id ="graph5"></div>
     </swiper-slide>
-    <swiper-slide>
-      <iframe src="lineChart.html" style="width: 95%; height: 88%;"></iframe>
-    </swiper-slide>
+  
     <swiper-slide> 
       <div id ="graph4"></div>
       <div id ="graph4_2"></div>
@@ -43,7 +46,9 @@
         <option value="India">India</option>
       </select>
     </swiper-slide>
-    <swiper-slide>Slide 6</swiper-slide>
+    <swiper-slide>
+      <div id ="graph7"></div>
+    </swiper-slide>
     <swiper-slide>Slide 7</swiper-slide>
     <swiper-slide>Slide 8</swiper-slide>
     <swiper-slide>Slide 9</swiper-slide>
@@ -55,6 +60,7 @@
   <script src ="graph3.js"></script>
   <script src ="graph4.js"></script>
   <script src ="graph_in_slide6.js"></script>
+  <script src ="graph1.js"></script>
 
 
 </body>
