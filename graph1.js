@@ -65,3 +65,32 @@ svg.append("g")
 
 svg.selectAll(".domain")
     .attr("stroke", "white");
+
+
+svg.append("text")
+  .attr("x", width / 2 )
+  .attr("y", margin.top)
+  .attr("text-anchor", "middle")
+  .attr("fill", "white")  
+  .style("font-size", "20px") 
+   
+  .text("User Growth Over the Years");
+
+  // Add X axis label:
+  svg.append("text")
+    .attr("text-anchor", "end")
+    .attr("x", width)
+    .attr("y", height -20)
+    .style("fill", "white")
+    .style("font-size", "30px")
+    .text("Year");
+
+  // Add Y axis label:
+  svg.append("text")
+    .attr("text-anchor", "end")
+    .attr("transform", "rotate(0)")
+    .attr("y", 30)
+    .attr("x", 150)
+    .style("fill", "white")
+    .style("font-size", "20px")
+    .text("Users (million)");

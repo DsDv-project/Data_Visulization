@@ -59,6 +59,9 @@ function createDonutChart(svg, data) {
         .on("mousemove", function(event) {
             return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");
         })
+        .on("mouseout", function() {
+            tooltip.style("visibility", "hidden");
+        });
 
     g.append("text")
         .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })

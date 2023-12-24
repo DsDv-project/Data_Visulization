@@ -42,8 +42,8 @@ d3.csv("netflix_titles_cleaned.csv", rowConverter).then(function(data) {
     d3.select("#graph3").select("svg").remove();
 
     var width = 1000;
-    var height = 700;
-    var margin = { top: 20, right: 70, bottom: 50, left: 200 };
+    var height = 600;
+    var margin = { top: 100, right: 70, bottom: 50, left: 200 };
 
     var svg = d3.select("#graph3")
         .append("svg")
@@ -98,7 +98,15 @@ d3.csv("netflix_titles_cleaned.csv", rowConverter).then(function(data) {
         .attr("stroke", "red");
     svg.selectAll("g path.domain")
         .attr("stroke", "green");
-
+    
+    svg.append("text")
+        .attr("x", width / 2 )
+        .attr("y", -20)
+        .attr("text-anchor", "middle")
+        .attr("fill", "white")  
+        .style("font-size", "30px") 
+         
+        .text("Top Countries with Most Netflix Content");
 }}).catch(function(error) {
     console.log(error);
 });
