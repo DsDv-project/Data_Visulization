@@ -132,6 +132,15 @@ d3.csv("netflix_titles_cleaned.csv", rowConverter).then(function(data) {
         svg.selectAll("g path.domain")
             .attr("stroke", "green");
 
+        // Add a title to the chart
+        svg.append("text")
+            .attr("x", width/ 1.7)
+            .attr("y", -20)
+            .attr("text-anchor", "middle")
+            .style("font-size", "20px")
+            .style("text-decoration", "underline")
+            .attr("fill", "white")
+            .text("Number of Movies vs Number of TV Shows for US, India, and UK");
 
         // Add legend
         var legend = svg.selectAll(".legend")
