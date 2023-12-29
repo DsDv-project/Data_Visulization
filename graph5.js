@@ -68,7 +68,7 @@ d3.csv("netflix_titles_cleaned.csv", rowConverter).then(function(data) {
 
         var color = d3.scaleOrdinal()
             .domain(["TV Show", "Movie"])
-            .range(["black", "red"]);
+            .range(["#221f1f", "#b20710"]);
 
         var y = d3.scaleLinear()
             .range([height, 0])
@@ -128,7 +128,7 @@ d3.csv("netflix_titles_cleaned.csv", rowConverter).then(function(data) {
             .style("font-size", "20px")
             .attr("fill", "Ivory");
         svg.selectAll("g g.tick line")
-            .attr("stroke", "red");
+            .attr("stroke", "#b20710");
         svg.selectAll("g path.domain")
             .attr("stroke", "green");
 
