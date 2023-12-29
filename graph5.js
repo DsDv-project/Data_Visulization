@@ -43,9 +43,9 @@ d3.csv("netflix_titles_cleaned.csv", rowConverter).then(function(data) {
     function updateData() {
         d3.select("#graph5").select("svg").remove();
 
-        var width = 1000;
-        var height = 600;
-        var margin = { top: 35, right: 70, bottom: 50, left: 150 };
+        var width = 800;
+        var height = 700;
+        var margin = { top: 35, right: 70, bottom: 50, left: 500 };
 
         var svg = d3.select("#graph5")
             .append("svg")
@@ -130,14 +130,14 @@ d3.csv("netflix_titles_cleaned.csv", rowConverter).then(function(data) {
         svg.selectAll("g g.tick line")
             .attr("stroke", "#b20710");
         svg.selectAll("g path.domain")
-            .attr("stroke", "green");
+            .attr("stroke", "white");
 
         // Add a title to the chart
         svg.append("text")
             .attr("x", width/ 1.7)
             .attr("y", -20)
             .attr("text-anchor", "middle")
-            .style("font-size", "20px")
+            .style("font-size", "25px")
             .style("text-decoration", "underline")
             .attr("fill", "white")
             .text("Number of Movies vs Number of TV Shows for US, India, and UK");
@@ -147,7 +147,7 @@ d3.csv("netflix_titles_cleaned.csv", rowConverter).then(function(data) {
         .data(color.domain())
         .enter().append("g")
         .attr("class", "legend")
-        .attr("fill", "pink")
+        .attr("fill", "white")
         .attr("transform", function(d, i) { return "translate(0," + i * 28 + ")"; });
 
         legend.append("rect")
